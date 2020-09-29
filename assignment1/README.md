@@ -47,7 +47,7 @@ The message is provided to the `commit` sub-command as additional argument.
 As unique identifier use a counter (starting from 0) and prefix the value with `r` (for revision).
 
 ```
-$ lit commit 'Commit message goes here'
+$ lit commit 'Add coin operated self-destruct feature'
 Commit: r42
 Date: Mon Sep 28 23:27:53 CEST 2020
 ```
@@ -62,21 +62,30 @@ $ lit show r42
 Commit: r42
 Date: Mon Sep 28 23:27:53 CEST 2020
 
-Commit message goes here
+Add coin operated self-destruct feature
 
---- a/Assets/Generic/Logic/Utils/Math.cs
-+++ b/Assets/Generic/Logic/Utils/Math.cs
-@@ -1,5 +1,10 @@
- using UnityEngine;
+--- a/main.c
++++ b/main.c
+@@ -1,8 +1,19 @@
+ #include <stdio.h>
+ #include <stdlib.h>
 
-+static class Vector2Extensions
-+{
-+    public static Vector3 AsVector3(this Vector2 v) => new Vector3(v.x, v.y);
-+}
++#include <ship_systems/propulsion/shaw_fujikawa.h>
 +
- static class Vector3Extensions
- {
-     public static Vector2 AsVector2(this Vector3 v) => new Vector2(v.x, v.y);
++#include <utils/coin_operator.h>
++
+  int main(void)
+  {
+      puts("Hello World");
++
++    if (coin_operator_triggered()) {
++        puts("Have a nice day (> . =)");
++        prop_engine_t *engine = prop_ftl_get_shaw_fujikawa();
++        prop_detonate(engine);
++    }
++
+      return EXIT_SUCCESS;
+  }
 ```
 
 ### `lit checkout`
