@@ -108,10 +108,10 @@ robot.c       # currently checked out version.
 robot.c.r1    # version of the other branch
 robot.c.r0    # common base of both branches
 
-# Manually resolving the merge conflict:
+$ # Manually resolving the merge conflict:
 $ vimdiff robot.c robot.c.r1 robot.c.r0
 
-# Cleanup
+$ # Cleanup
 $ rm robot.c.r1 robot.c.r0
 
 $ lit commit
