@@ -39,7 +39,6 @@ Preferably use the following link.
 - [C++ 17 Standard (Draft)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf)
 - [C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 - [cppreference.com](http://en.cppreference.com)
-- [Compiler Explorer](https://compiler-explorer.com/)
 
 ## Useful References / Tools
 
