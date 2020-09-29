@@ -162,10 +162,24 @@ diff -s file1.r3 - <<-EOF
 	This is the second line of the first file.
 EOF
 
-# To resolve the conflict, we simply take the version of the current commit.
+# Let's simulate some conflict resolution.
+echo >>file1 "Sixth line added during merge conflict."
+
+# Before continuing we need to cleanup the leftover files.
 rm file1.r6 file1.r3
 
 lit commit # r7
+
+# Let's verify the final result.
+
+diff -s file1 - <<-EOF
+	This is the first line of the first file. 🚀
+	This is the second line of the first file.
+	A third line is added to the first file.
+	A forth line is added.
+	Fifth line on top of r4.
+	Sixth line added during merge conflict.
+EOF
 
 # o─┐ ← r7 Merge r6 into r5
 # │ o   r6 Extend file1 another way
