@@ -5,7 +5,7 @@
 In this first assignment you are tasked to create a very basic version control system (VCS) similar to [Git](https://git-scm.com/) or [Mercurial](https://www.mercurial-scm.org/).
 
 For this assignment you are *not* allowed to work in teams.
-You are not allowed to use code from other people participating in this course.
+You are *not* allowed to use code from other people participating in this course.
 Always state the origin of non-original code and ideas.
 
 It is recommend to be familiar Git to understand the intensions behind the following commands.

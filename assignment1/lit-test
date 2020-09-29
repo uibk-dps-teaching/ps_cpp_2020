@@ -119,11 +119,11 @@ EOF
 lit log
 
 echo "== Setting up a conflict"
-echo >>file1 "Fifth line ontop of r4."
+echo >>file1 "Fifth line on top of r4."
 lit commit "Extend file1 one way" # r5
 
 lit checkout r3
-echo >>file1 "Third line ontop of r3."
+echo >>file1 "Third line on top of r3."
 lit commit "Extend file1 another way" # r6
 
 #   o ← r6 Extend file1 another way
@@ -146,14 +146,14 @@ diff -s file1 - <<-EOF
 	This is the second line of the first file.
 	A third line is added to the first file.
 	A forth line is added.
-	Fifth line ontop of r4.
+	Fifth line on top of r4.
 EOF
 
 #   other breanch
 diff -s file1.r6 - <<-EOF
 	This is the first line of the first file. 🚀
 	This is the second line of the first file.
-	Third line ontop of r3.
+	Third line on top of r3.
 EOF
 
 #  common base
