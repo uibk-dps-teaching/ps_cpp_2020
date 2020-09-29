@@ -8,7 +8,7 @@ For this assignment you are *not* allowed to work in teams.
 You are *not* allowed to use code from other people participating in this course.
 Always state the origin of non-original code and ideas.
 
-It is recommend to be familiar Git to understand the intensions behind the following commands.
+It is recommend to be familiar with Git to understand the intensions behind the following commands.
 
 ## `lit`
 
@@ -41,10 +41,10 @@ Keep the output concise, similar to `git status --short`.
 Creates a new commit containing *all* changes.
 In contrast to Git, there is no staging area.
 
-A commit is comprised of a unique identifier, the identifier of the previous commit, a timestamp, a message, and the recorded changes.
+A commit is comprised of a unique identifier, the identifier of the parent commit(s), a timestamp, a message, and the recorded changes.
 The message is provided to the `commit` sub-command as additional argument.
 
-As unique identifier use a counter (starting from 0) and prefix the value with `r` (for revision).
+Use a counter (starting from 0) prefixed with `r` (for revision) as unique identifier.
 
 ```
 $ lit commit 'Add coin operated self-destruct feature'
@@ -60,6 +60,7 @@ If no commit is specified, display the currently checked out one.
 ```
 $ lit show r42
 Commit: r42
+Parents: r41
 Date: Mon Sep 28 23:27:53 CEST 2020
 
 Add coin operated self-destruct feature
@@ -108,22 +109,22 @@ If a file has been modified in both branches, the whole file is treated as a con
 If a conflict is encountered, stop the merge process and provide the respective files of the other branch as well as the common base.
 
 ```
-$ lit merge r1
+$ lit merge r21
 Merge conflict(s) detected:
     - robot.c
 
 $ ls
 robot.c       # currently checked out version.
-robot.c.r1    # version of the other branch
-robot.c.r0    # common base of both branches
+robot.c.r21   # version of the other branch
+robot.c.r18   # common base of both branches
 
 $ # Manually resolving the merge conflict:
-$ vimdiff robot.c robot.c.r1 robot.c.r0
+$ vimdiff robot.c robot.c.r21 robot.c.r18
 
 $ # Cleanup
-$ rm robot.c.r1 robot.c.r0
+$ rm robot.c.r21 robot.c.r18
 
-$ lit commit
+$ lit commit 'Merge r21 into r20'
 ```
 
 To complete the merge after manually resolving a conflict, invoke the `commit` sub-command.
@@ -151,22 +152,26 @@ If you encounter a problem where the specification is ambiguous or unclear, make
 You are only allowed to use:
 - C++ standard library (C++17 standard)
 - C standard library (as fallback)
-- POSIX standard library
+- POSIX standard library (as fallback)
 - `diff` / `patch` command
 
 You must use CMake as build system.
 
-Use [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) to automatically format your code using the provided `.clang-format` configuration.
+Use [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) to automatically format your code using the provided [`.clang-format`](../.clang-format) configuration.
 There is probably a plugin for your text editor / IDE to automate this process.
 
 Your VCS must store the differences (as reported by `diff -u`).
 Storing a full copy of the repository's files for each commit is not allowed.
-You don't need to track empty folders, yet files located in sub-directories.
+You don't need to track empty folders, yet files located within folders.
+
+You may treat empty files as being deleted.
+
+You may assume that `lit` is always executed from the root of a repository.
 
 You may assume that only one instance of your VCS operators on a repository at any point in time.
 Hence, you don't need to add some form of locking mechanism to prevent concurrent access.
 
-The executable does not depend on any additional resources (except for `diff` and `patch`).
+The executable does not depend on any additional resources (except for standard libraries, `diff` and `patch`).
 You may assume that `diff` and `patch` are present and available via `PATH`.
 
 **Hint:** It may be a good idea to create a dedicated class for invoking shell commands like `diff` and `patch`.
@@ -179,7 +184,7 @@ Along with this specification a rudimentary test script [`lit-test`](lit-test) i
 It assumes that the `lit` executable is in your path.
 Remember that you can use `bash -x` to debug the test script.
 
-You are encouraged to setup some more test cases for your implementation.
+You are encouraged to set up some more test cases for your implementation.
 
 ## Evaluation (9 points)
 

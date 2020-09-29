@@ -171,7 +171,7 @@ echo >>file1 "Sixth line added during merge conflict."
 # Before continuing we need to cleanup the leftover files.
 rm file1.r6 file1.r3
 
-lit commit # r7
+lit commit "Merge r6 into r5" # r7
 
 # Let's verify the final result.
 
