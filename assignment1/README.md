@@ -137,6 +137,8 @@ o─┘   r0 "First Commit"
 
 ## Implementation
 
+If you encounter a problem where the specification is ambiguous or unclear, make a justifiable decision on what to do.
+
 You are only allowed to use:
 - C++ standard library (C++17 standard)
 - C standard library (as fallback)
