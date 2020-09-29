@@ -39,7 +39,8 @@ echo >>file1 "A forth line is added."
 lit commit "Extend file1 even further"
 
 echo "== Displaying graph"
-# o < r2 Extend file1 even further
+
+# o ← r2 Extend file1 even further
 # o   r1 Extend file1
 # o   r0 Add file1
 lit log
@@ -87,7 +88,7 @@ EOF
 # This should be r3.
 lit commit "Add file2"
 
-# o   < r3 Add file2
+# o   ← r3 Add file2
 # │ o   r2 Extend file1 even further
 # │ o   r1 Extend file1
 # o─┘   r0 Add file1
@@ -110,7 +111,7 @@ diff -s subfolder/file2 <<-EOF
 	And another line in the second file.
 EOF
 
-# o─┐ < r4 Merge r3 into r2
+# o─┐ ← r4 Merge r3 into r2
 # │ o   r3 Add file2
 # o │   r2 Extend file1 even further
 # o │   r1 Extend file1
@@ -125,7 +126,7 @@ lit checkout r3
 echo >>file1 "Third line ontop of r3."
 lit commit "Extend file1 another way" # r6
 
-#   o < r6 Extend file1 another way
+#   o ← r6 Extend file1 another way
 # o │   r5 Extend file1 one way
 # o─┤   r4 Merge r3 into r2
 # │ o   r3 Add file2
@@ -166,7 +167,7 @@ rm file1.r6 file1.r3
 
 lit commit # r7
 
-# o─┐ < r7 Merge r6 into r5
+# o─┐ ← r7 Merge r6 into r5
 # │ o   r6 Extend file1 another way
 # o │   r5 Extend file1 one way
 # o─┤   r4 Merge r3 into r2

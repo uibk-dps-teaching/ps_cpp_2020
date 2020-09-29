@@ -129,7 +129,7 @@ You don't have to follow the exact format of this example:
 
 ```
 $ lit log
-o─┐ < r3 "Merge r2 with r1"
+o─┐ ← r3 "Merge r2 with r1"
 │ o   r2 "Add chocolate egg dispenser"
 o │   r1 "Add coin operated self destruct feature"
 o─┘   r0 "First Commit"
