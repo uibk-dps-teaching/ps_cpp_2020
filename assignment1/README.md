@@ -92,7 +92,7 @@ Add coin operated self-destruct feature
 ### `lit checkout`
 
 This resets the state of all files to the given commit's state.
-All un-commited changes are dropped upon checkout.
+All un-committed changes are dropped upon checkout.
 
 If no commit is specified, reset the current state to the currently checked out commit.
 
@@ -101,7 +101,7 @@ You can add new branches by first checking out a previous commit, and then creat
 ### `lit merge`
 
 This command initiates a merge with the currently checked out commit and the specified commit.
-A merge is only initiated if there are no un-commited changes.
+A merge is only initiated if there are no un-committed changes.
 
 Auto-merging files that have been touched in both branches is not supported.
 If a file has been modified in both branches, the whole file is treated as a conflict.
@@ -168,14 +168,14 @@ You may treat empty files as being deleted.
 
 You may assume that `lit` is always executed from the root of a repository.
 
-You may assume that only one instance of your VCS operators on a repository at any point in time.
+You may assume that only one instance of your VCS operates on a repository at any point in time.
 Hence, you don't need to add some form of locking mechanism to prevent concurrent access.
 
 The executable does not depend on any additional resources (except for standard libraries, `diff` and `patch`).
 You may assume that `diff` and `patch` are present and available via `PATH`.
 
 **Hint:** It may be a good idea to create a dedicated class for invoking shell commands like `diff` and `patch`.
-Simply using `system(3)` may not give you enough control over the process as you also need to interactive with `stdin` / `stdout`.
+Simply using `system(3)` may not give you enough control over the process as you also need to interact with `stdin` / `stdout`.
 Consider using `popen(3)` and getting some inspiration from [Go's `exec` package](https://golang.org/pkg/os/exec/) or [Python's `subprocess` module](https://docs.python.org/3/library/subprocess.html).
 
 ## Testing
