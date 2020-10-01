@@ -155,7 +155,7 @@ You are only allowed to use:
 - POSIX standard library (as fallback)
 - `diff` / `patch` command
 
-You must use CMake as build system.
+You must use [CMake](https://cmake.org/) as build system.
 
 Use [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) to automatically format your code using the provided [`.clang-format`](../.clang-format) configuration.
 There is probably a plugin for your text editor / IDE to automate this process.
