@@ -1,6 +1,4 @@
-# Advanced C++ Programming
-
-
+![Advanced C++ Programming](images/banner.gif)
 
 ## Grading
 
@@ -25,10 +23,7 @@ Please use [Compiler Explorer](https://compiler-explorer.com/) and its short lin
 
 ## Contacting Me
 
-If you have questions or want to know more about a certain topic, I am always glad to help.
-You can find me in room 2W05 of the ICT building.
-
-You can also contact me by email, just be sure to send it from your university account.
+You can contact me by email, just be sure to send it from your university account.
 Please keep your email informal and include the course number in the subject.
 Preferably use the following link.
 
