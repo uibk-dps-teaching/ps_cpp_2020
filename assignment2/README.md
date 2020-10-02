@@ -27,7 +27,7 @@ You are allowed to use:
 - [nlohmann/json](https://github.com/nlohmann/json) / [RapidJSON](https://rapidjson.org/)
 - [Assimp](https://www.assimp.org/)
 - [sbt-image](https://github.com/nothings/stb/blob/master/stb_image.h)
-- [Ogg](https://xiph.org/ogg/) / [Vorbis] (https://xiph.org/vorbis/) / [Opus](https://opus-codec.org/)
+- [Ogg](https://xiph.org/ogg/) / [Vorbis](https://xiph.org/vorbis/) / [Opus](https://opus-codec.org/)
 - [Tiled](https://www.mapeditor.org/)
 - [OpenSSL](https://www.openssl.org/)
 - [SQLite](https://www.sqlite.org/)
