@@ -1,8 +1,9 @@
-# Assignment 1 (draft)
+# Assignment 1
 
 *due on 18 November 2020*
 
-In this first assignment you are tasked to create a very basic version control system (VCS) similar to [Git](https://git-scm.com/) or [Mercurial](https://www.mercurial-scm.org/).
+In this first assignment your task is to create a version control system (VCS) similar to [Git](https://git-scm.com/) or [Mercurial](https://www.mercurial-scm.org/).
+However, this VCS will be much simpler.
 
 For this assignment you are *not* allowed to work in teams.
 You are *not* allowed to use code from other people participating in this course.
@@ -71,13 +72,13 @@ Add coin operated self-destruct feature
  #include <stdio.h>
  #include <stdlib.h>
 
-+#include <ship_systems/propulsion/shaw_fujikawa.h>
++#include "ship_systems/propulsion/shaw_fujikawa.h"
 +
-+#include <utils/coin_operator.h>
++#include "utils/coin_operator.h"
 +
-  int main(void)
-  {
-      puts("Hello World");
+ int main(void)
+ {
+     puts("Hello World");
 +
 +    if (coin_operator_triggered()) {
 +        puts("Have a nice day (> . =)");
@@ -85,8 +86,8 @@ Add coin operated self-destruct feature
 +        prop_detonate(engine);
 +    }
 +
-      return EXIT_SUCCESS;
-  }
+     return EXIT_SUCCESS;
+ }
 ```
 
 ### `lit checkout`
