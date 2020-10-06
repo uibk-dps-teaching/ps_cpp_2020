@@ -15,6 +15,8 @@ This includes things like:
 - Unnecessary waste of time or space (memory leaks)
 - …
 
+Attendance is not required for this course.
+
 ## Exercises
 
 While the previous iterations of this course leveraged weekly exercise sheets, this one does not.
