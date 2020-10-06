@@ -44,12 +44,44 @@ You are allowed to use:
 
 Feel free to ask me about other libraries / tools.
 
-Your application should work on Linux and Windows unless there is a specific reason why it cannot be cross-platform.
+Your application should work either on Linux (64-Bit) or Windows (64-Bit), preferably both unless there is a specific reason why it cannot be cross-platform.
 For Linux, assume a recent version of Ubuntu Desktop and that the required dependencies are installed via the system's package manager.
-Use the corresponding CMake `find_package` mechanism to find them, it is recommended to leverage [`pkgconf`](https://cmake.org/cmake/help/latest/module/FindPkgConfig.html).
+Use the corresponding CMake `find_package` mechanism to find them.
+Prefer [`pkgconf`](https://cmake.org/cmake/help/latest/module/FindPkgConfig.html) over custom *FindPackage* scripts.
 For Windows you can simply ship pre-built libraries that are picked up by CMake automatically.
 
 You must use [CMake](https://cmake.org/) as build system.
 
 Use [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) to automatically format your code using the provided [`.clang-format`](../.clang-format) configuration.
 
+## Team Composition + Specification
+
+Send me an email with your team composition and your specification as early as possible.
+Use the following link:
+
+📧 [send email](mailto:alexander.hirsch@uibk.ac.at?subject=703807%20-%20Assignment%202%20Team%20Composition)
+
+## Submission
+
+### Packaging
+
+Assuming you are using Git to manage your code, please use the `git archive` command to package your project.
+Use the following command, replacing `XX` with your team number (with leading zero, e.g. `02`).
+
+    git archive --prefix=team_XX_assignemnt_2/ --format=zip HEAD > team_XX_assignemnt_2.zip
+
+### Build Test Submission
+
+Submit a non-final version of your project around 2 weeks before the final deadline.
+I will verify that your project builds on my test system(s) and let you know if I run into any issues.
+Use the following link, again replacing `XX` with your team number.
+
+📧 [send email](mailto:alexander.hirsch@uibk.ac.at?subject=703807%20-%20Team%20XX%20Assignment%202%20Build%20Test)
+
+
+### Final Submission
+
+Verify that the packaged version is working.
+Use the following link, again replacing `XX` with your team number.
+
+📧 [send email](mailto:alexander.hirsch@uibk.ac.at?subject=703807%20-%20Team%20XX%20Assignment%202%20Final)
