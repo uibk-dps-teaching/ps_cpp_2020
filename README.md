@@ -15,6 +15,15 @@ This includes things like:
 - Unnecessary waste of time or space (memory leaks)
 - …
 
+## Exercises
+
+While the previous iterations of this course leveraged weekly exercise sheets, this one does not.
+However, I would like to keep these exercises around as they support the lecture and explore certain auxiliary topics relevant to C++.
+You are encouraged to solve (or at least think about) these exercises and participate in the discussions during the stream.
+You will not submit a solution as these exercises are optional, but feel free to ask questions when running into problems.
+
+The [`exercises`](exercises) folder will be updated throughout the semester.
+
 ## C++ Related Questions
 
 Break code specific questions down to a minimal example.
