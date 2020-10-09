@@ -4,8 +4,8 @@
 
 Throughout this course you have to complete 2 assignments.
 
-- Assignment 1 has 9 points to score
-- Assignment 2 has 11 points to score
+- [Assignment 1](assignment1) has 9 points to score
+- [Assignment 2](assignment2) has 11 points to score
 - You need at least 13 points to pass this course
 
 Points will be subtracted for shortcomings discovered during evaluation.
@@ -46,6 +46,10 @@ Preferably use the following link.
 - [C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 - [cppreference.com](http://en.cppreference.com)
 
+## Talks 🎥
+
+- [CppCon 2018 — *Simplicity: Not Just For Beginners*](https://www.youtube.com/watch?v=n0Ak6xtVXno)
+
 ## Useful References / Tools
 
 - [Awesome Modern C++](https://github.com/rigtorp/awesome-modern-cpp)
@@ -60,5 +64,6 @@ Preferably use the following link.
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 - [Google Test](https://github.com/google/googletest)
 - [Modern C++ Features](https://github.com/AnthonyCalandra/modern-cpp-features)
+- [Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
 - [Online C++ Demangler](https://demangler.com)
 - [STL Containers](http://en.cppreference.com/w/cpp/container)
