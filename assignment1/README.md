@@ -177,7 +177,7 @@ You may assume that `diff` and `patch` are present and available via `PATH`.
 
 **Hint:** It may be a good idea to create a dedicated class for invoking shell commands like `diff` and `patch`.
 Simply using `system(3)` may not give you enough control over the process as you also need to interact with `stdin` / `stdout`.
-Consider using `popen(3)` and getting some inspiration from [Go's `exec` package](https://golang.org/pkg/os/exec/) or [Python's `subprocess` module](https://docs.python.org/3/library/subprocess.html).
+Consider using `popen(3)` (or even `fork(2)`, `exec(2)`, `pipe(2)`, and `dup2(2)`) and getting some inspiration from [Go's `exec` package](https://golang.org/pkg/os/exec/) or [Python's `subprocess` module](https://docs.python.org/3/library/subprocess.html).
 
 ## Testing
 
