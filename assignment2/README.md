@@ -34,7 +34,7 @@ You are allowed to use:
 - [Catch2](https://github.com/DigitalInBlue/Celero)
 - [Google Test](https://github.com/google/googletest)
 - [Google Benchmark](https://github.com/google/benchmark)
-- [spdlog](https://github.com/gabime/spdlog)
+- [spdlog](https://github.com/gabime/spdlog) / [plog](https://github.com/SergiusTheBest/plog)
 - [fmt](https://github.com/fmtlib/fmt)
 - [AngelScript](https://www.angelcode.com/angelscript/)
 - [Lua](http://www.lua.org/) / [sol2](https://github.com/ThePhD/sol2)
