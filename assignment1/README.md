@@ -153,7 +153,7 @@ If you encounter a problem where the specification is ambiguous or unclear, make
 You are only allowed to use:
 - C++ standard library (C++17 standard)
 - C standard library (as fallback)
-- POSIX standard library (as fallback)
+- GNU/Linux operating system's C APIs (POSIX, `mmap`, memfd, eventfd, …)
 - `diff` / `patch` command
 
 You must use [CMake](https://cmake.org/) as build system.
