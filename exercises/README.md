@@ -43,3 +43,25 @@ It depends on all three libraries.
 
 CMake itself is a build system generator.
 You can choose from a variety of target build systems.
+
+## Task 04
+
+Examine the program [`iterations.cpp`](task04/iterations.cpp) and think about the expected output.
+Compile the program and run it.
+What do you notice?
+Did you expect this behaviour?
+Did you get any compiler warnings?
+Investigate what is actually happening (consider using `valgrind` or a debugger).
+
+How can such errors be prevented?
+Look for tools (e.g. static code analysers) which help discovering such faulty code.
+
+**Note:** If you run the executable and everything seems normal, try changing the initial content of `xs`, using different optimisation flags, or a different compiler.
+The actual behaviour of this executable depends on various factors.
+
+## Task 05
+
+You are given the program [`strange.cpp`](task05/strange.cpp).
+Compile it with different compilers and optimisation flags.
+What do you notice?
+What is really happening here?
