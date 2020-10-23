@@ -59,9 +59,13 @@ Look for tools (e.g. static code analysers) which help discovering such faulty c
 **Note:** If you run the executable and everything seems normal, try changing the initial content of `xs`, using different optimisation flags, or a different compiler.
 The actual behaviour of this executable depends on various factors.
 
+See [Iterator Invalidation](https://en.cppreference.com/w/cpp/container#Iterator_invalidation).
+
 ## Task 05
 
 You are given the program [`strange.cpp`](task05/strange.cpp).
 Compile it with different compilers and optimisation flags.
 What do you notice?
 What is really happening here?
+
+See [Undefined Behaviour](https://en.cppreference.com/w/cpp/language/ub) and [Defining the undefinedness of C](https://dl.acm.org/citation.cfm?id=2737979).

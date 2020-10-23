@@ -49,6 +49,8 @@ Preferably use the following link.
 ## Talks 🎥
 
 - [CppCon 2018 — *Simplicity: Not Just For Beginners*](https://www.youtube.com/watch?v=n0Ak6xtVXno)
+- [CppCon 2019 — *Naming is Hard: Let's Do Better*](https://www.youtube.com/watch?v=MBRoCdtZOYg)
+- [CppCon 2015 — *Give me 15 minutes & I'll change your view of GDB*](https://www.youtube.com/watch?v=PorfLSr3DDI)
 
 ## Useful References / Tools
 
