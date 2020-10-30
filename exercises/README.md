@@ -95,3 +95,11 @@ struct Vec2 {
 - Check your implementation for memory leaks and memory corruptions using `valgrind` and sanitizers
 
 See [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)).
+
+## Task 07
+
+Read [this blog post](https://www.gamedev.net/blogs/entry/2265481-oop-is-dead-long-live-oop).
+
+- Pay attention to *implementation vs. interface inheritance*
+- Pay attention to the use of templates (assuming you've already covered them)
+    - Think about the benefits and drawbacks of the used patterns
