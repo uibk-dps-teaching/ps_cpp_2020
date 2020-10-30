@@ -69,3 +69,29 @@ What do you notice?
 What is really happening here?
 
 See [Undefined Behaviour](https://en.cppreference.com/w/cpp/language/ub) and [Defining the undefinedness of C](https://dl.acm.org/citation.cfm?id=2737979).
+
+## Task 06
+
+This task focuses on the correct implementation of RAII as well as copy and move semantics.
+You are asked to implement the concept of `unique_ptr` and `shared_ptr`.
+Since we won't concern ourselves with templates for the moment your implementation will *own* an instance of the following `struct`.
+
+```cpp
+struct Vec2 {
+    float x, y;
+};
+```
+
+- Read the documentation regarding *smart pointers*, `unique_ptr`, and `shared_ptr`
+- Implement your version of `unique_ptr_to_vec2` and `shared_ptr_to_vec2` fulfilling these requirements:
+  - *Dynamically* allocate an instance of `Vec2` in your constructor
+  - De-allocate the `Vec2` instance in your destructor
+  - Implement correct copy semantics (copy constructor / copy assignment)
+  - Implement correct move semantics (move constructor / move assignment)
+  - Enable access to `Vec2` via the operators `*` and `->`
+  - Thread-safety for `shared_ptr_to_vec2`'s reference counter is not required
+  - Pay attention to corner-cases like self-assignment (`v = v`)
+- Prepare a few interesting test cases
+- Check your implementation for memory leaks and memory corruptions using `valgrind` and sanitizers
+
+See [Rule of Three](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)).
