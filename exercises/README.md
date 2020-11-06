@@ -138,3 +138,17 @@ Compare the performance of:
 - `std::list`
 - `std::set`
 - `std::unordered_set`
+
+## Task 10
+
+Have a look at [this](https://bollu.github.io/mathemagic/declarative/index.html).
+Now, do that in C++!
+
+Utilize lambdas, `std::function`, and/or structs with call operators.
+Critically think about ownership and minimize the amount of heap allocations.
+
+## Task 11
+
+Take a look at [Boost's chat server example](https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/examples/cpp11_examples.html#boost_asio.examples.cpp11_examples.chat).
+Try to understand how the session's lifetime is managed by the server.
+Focus on `std::enable_shared_from_this` in combination with lambda captures.
