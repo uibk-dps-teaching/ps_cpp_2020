@@ -52,6 +52,7 @@ Preferably use the following link.
 - [CppCon 2019 — *Naming is Hard: Let's Do Better*](https://www.youtube.com/watch?v=MBRoCdtZOYg)
 - [CppCon 2015 — *Give me 15 minutes & I'll change your view of GDB*](https://www.youtube.com/watch?v=PorfLSr3DDI)
 - [CppCon 2018 — *OOP is dead, long live Data-oriented design*](https://www.youtube.com/watch?v=yy8jQgmhbAU)
+- [CppCon 2014 — *Back to the Basics! Essentials of Modern C++ Style*](https://www.youtube.com/watch?v=xnqTKD8uD64)
 
 ## Useful References / Tools
 
