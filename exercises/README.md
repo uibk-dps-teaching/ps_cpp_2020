@@ -110,8 +110,8 @@ You are given the following definition of a person:
 
 ```cpp
 struct Person {
-    std::string firstName;
-    std::string lastName;
+    std::string firstname;
+    std::string lastname;
     int age;
 };
 ```
