@@ -104,8 +104,9 @@ You can add new branches by first checking out a previous commit, and then creat
 This command initiates a merge with the currently checked out commit and the specified commit.
 A merge is only initiated if there are no un-committed changes.
 
-Auto-merging files that have been touched in both branches is not supported.
-If a file has been modified in both branches, the whole file is treated as a conflict.
+Auto-merging files that have been modified in both branches is not supported.
+If a file has been modified (or created) in both branches, the whole file is treated as a conflict.
+If a file has been deleted in both branches you may treat it as no conflict.
 
 If a conflict is encountered, stop the merge process and provide the respective files of the other branch as well as the common base.
 
