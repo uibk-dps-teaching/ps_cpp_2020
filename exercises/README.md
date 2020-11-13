@@ -152,3 +152,75 @@ Critically think about ownership and minimize the amount of heap allocations.
 Take a look at [Boost's chat server example](https://www.boost.org/doc/libs/1_74_0/doc/html/boost_asio/examples/cpp11_examples.html#boost_asio.examples.cpp11_examples.chat).
 Try to understand how the session's lifetime is managed by the server.
 Focus on `std::enable_shared_from_this` in combination with lambda captures.
+
+## Task 12
+
+Reuse `Person` from Task 08 and take the following, incomplete definition of a room:
+
+```cpp
+class Room {
+  public:
+    Room(int id, size_t limit) : id(id), limit(limit) {}
+
+    // Returns true iff the person successfully entered.
+    bool enter(/* Person */) {}
+
+    void exit(/* Person */) {}
+
+  private:
+    const int id;
+    const size_t limit;
+    std::vector</* Person */> peopleInside;
+};
+```
+
+`Room` contains a list of people currently located inside.
+People can enter and exit the room via the respective member functions.
+However, at most only `limit` people may be inside at any given time (invariant).
+
+- Add the missing pieces, paying special attention to the types
+
+The following use cases need to be covered next:
+- Asking a `Room` how many people are currently located inside
+- Asking a `Room` whether a specific person is currently located inside
+- Iterating over all people currently located in a `Room`
+
+Implement whatever is necessary to support these use cases, making sure the invariant remains intact.
+
+## Task 13
+
+Reuse `Person` from Task 08.
+
+Create an `std::vector<std::shared_ptr<Person>>` with at least 3 different elements.
+Create a function which takes a `const std::vector<std::shared_ptr<Person>>&` as input and returns an `std::vector<Person*>`.
+Each element in the result vector corresponds to the respective element in the input vector.
+
+For the functional programming nerds, the definition of this function would be something like `fmap std::shared_ptr::get`.
+
+Write your function in different ways and compare the readability:
+- use a range-based for loop
+- use `std::transform`
+- use a lambda expression
+- use `std::mem_fn`
+
+Think about taking the argument by value instead of taking it by const reference.
+
+## Task 14
+
+Implement your own version of `std::vector` without using any of the provided containers — use *regular arrays* (`new[]` / `delete[]`) to house your elements.
+The focus of this task lies on the use of templates and implementation of iterators.
+You do not have to concern yourself with custom allocators.
+
+Test your implementation with different types (`int`, `double`, and a custom struct).
+
+Take your vector from task 1 and implement iterators.
+You might want to read through the respective documentation.
+
+Write some tests utilising algorithms provided by the standard library to check if your iterators behave correctly.
+
+## Task 15
+
+Take your vector implementation from Task 14 and instantiate it with a big number of unique types.
+
+Inspect the relationship between the number of unique instantiates and compile time.
+Furthermore, look at the compiled object file using `nm`.
