@@ -68,7 +68,7 @@ Use the following link:
 Assuming you are using Git to manage your code, please use the `git archive` command to package your project.
 Use the following command, replacing `XX` with your team number (with leading zero, e.g. `02`).
 
-    git archive --prefix=team_XX_assignemnt_2/ --format=zip HEAD > team_XX_assignemnt_2.zip
+    git archive --prefix=team_XX_assignment_2/ --format=zip HEAD > team_XX_assignment_2.zip
 
 ### Build Test Submission
 

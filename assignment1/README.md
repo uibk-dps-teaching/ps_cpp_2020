@@ -204,7 +204,7 @@ You are encouraged to set up some more test cases for your implementation.
 Assuming you are using Git to manage your code, please use the `git archive` command to package your project.
 Use the following command, replacing `firstname`, `lastname` accordingly (all lowercase).
 
-    git archive --prefix=lastname_firstname_assignemnt_1/ --format=zip HEAD > lastname_firstname_assignemnt_1.zip
+    git archive --prefix=lastname_firstname_assignment_1/ --format=zip HEAD > lastname_firstname_assignment_1.zip
 
 Verify that the packaged version is working and send it using the following link:
 
