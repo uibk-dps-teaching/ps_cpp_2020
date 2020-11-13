@@ -200,8 +200,8 @@ For the functional programming nerds, the definition of this function would be s
 Write your function in different ways and compare the readability:
 - use a range-based for loop
 - use `std::transform`
-- use a lambda expression
-- use `std::mem_fn`
+  - use a lambda expression
+  - use `std::mem_fn`
 
 Think about taking the argument by value instead of taking it by const reference.
 
