@@ -132,6 +132,8 @@ $ lit commit 'Merge r21 into r20'
 To complete the merge after manually resolving a conflict, invoke the `commit` sub-command.
 To abort the merge, use `checkout`.
 
+If no conflict is encountered, a merge commit is automatically created.
+
 ### `lit log`
 
 Displays a graph of all commits, one line per commit.
