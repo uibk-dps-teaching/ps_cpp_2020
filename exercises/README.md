@@ -224,3 +224,30 @@ Take your vector implementation from Task 14 and instantiate it with a big numbe
 
 Inspect the relationship between the number of unique instantiates and compile time.
 Furthermore, look at the compiled object file using `nm`.
+
+## Task 16
+
+In this task you have to create a rudimentary plugin system.
+
+You are given `plugin.hpp` which contains an interface for your plugins, as well as the function name of the constructor function and its type.
+Note that the constructor function returns an `std::unique_ptr<Plugin>`.
+
+- create an executable which *dynamically* loads plugins and executes their `run` member function
+- create two different plugins (`foo` and `bar`) showing off the plugin system
+
+It could look like this:
+
+    $ ./main ./libFoo.so
+    Creation of first plugin
+    Running the first plugin
+    Destruction of first plugin
+
+    $ ./main ./libFoo.so ./libBar.so
+    Creation of first plugin
+    Running the first plugin
+    Destruction of first plugin
+    Creation of second plugin
+    Running the second plugin
+    Destruction of second plugin
+
+*Hint:* Have a look at the related man-pages *dlopen(3)* and *dlsym(3)*.
