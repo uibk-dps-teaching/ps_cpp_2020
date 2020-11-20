@@ -7,7 +7,7 @@
 class Plugin {
   public:
 	virtual void run() = 0;
-	virtual ~Plugin(){};
+	virtual ~Plugin() {}
 };
 
 /// Symbol of the plugin constructor function.

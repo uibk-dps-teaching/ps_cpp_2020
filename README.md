@@ -46,7 +46,7 @@ Preferably use the following link.
 - [C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 - [cppreference.com](http://en.cppreference.com)
 
-## Talks 🎥
+## 🎥 Talks
 
 - [CppCon 2018 — *Simplicity: Not Just For Beginners*](https://www.youtube.com/watch?v=n0Ak6xtVXno)
 - [CppCon 2019 — *Naming is Hard: Let's Do Better*](https://www.youtube.com/watch?v=MBRoCdtZOYg)

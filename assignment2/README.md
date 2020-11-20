@@ -26,7 +26,7 @@ You are allowed to use:
 - [OpenAL](https://openal.org/)
 - [nlohmann/json](https://github.com/nlohmann/json) / [RapidJSON](https://rapidjson.org/)
 - [Assimp](https://www.assimp.org/)
-- [sbt-image](https://github.com/nothings/stb/blob/master/stb_image.h)
+- [stb-image](https://github.com/nothings/stb/blob/master/stb_image.h)
 - [Ogg](https://xiph.org/ogg/) / [Vorbis](https://xiph.org/vorbis/) / [Opus](https://opus-codec.org/)
 - [Tiled](https://www.mapeditor.org/)
 - [OpenSSL](https://www.openssl.org/)
