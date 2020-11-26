@@ -53,14 +53,14 @@
             - This allows getters to be named without the `get` prefix (e.g. `Vec3 position() const;`).
             - Setters get prefixed with `set` (e.g. `void setPosition(const Vec3 &);`).
 
-- Leverage RAII
+- Leverage RAII!
     - No need for `.close()` or alike with classes like `std::ifstream`.
     - Consider wrapping non-RAII objects with dedicated classes or `std::unique_ptr` with a custom deleter.
 
-- Do not use `.h` for C++ header files
+- Do not use `.h` for C++ header files.
     - C++ header files typically cannot be used by C projects, this should be highlighted by the file extension.
     - Only use `.h` if that header is meant to be used in C projects.
-    - I am aware of [the corresponding core guideline](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#sf1-use-a-cpp-suffix-for-code-files-and-h-for-interface-files-if-your-project-doesnt-already-follow-another-convention)
+    - I am aware of [the corresponding core guideline](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#sf1-use-a-cpp-suffix-for-code-files-and-h-for-interface-files-if-your-project-doesnt-already-follow-another-convention).
     - Personally, I prefer `.hpp` and `.cpp`.
 
 - Include order
@@ -74,7 +74,7 @@
 
 - Header guards
     - See [Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#sf8-use-include-guards-for-all-h-files)
-    - Personally, I am okay with `#pragma once` but the argument of *not being standard confirm* stands.
+    - Personally, I am okay with `#pragma once` but the argument of *not being standard conform* stands.
     - A header guard should span the *entire* file (maybe except the license header).
 
 - `-Werror`
@@ -86,44 +86,44 @@
 - Unused parameters
     - In C++ just omit the name; no more warning.
 
-- Use namespaces
+- Use namespaces!
     - Do not prefix symbols with the project name as you'd do in C.
     - Prefer at least one top-level namespace (e.g. `lit`).
     - Do not hesitate adding sub-namespaces (`detail` is rather common for in-file utility functions).
     - Namespaces commonly model the directory structure of a project.
 
-- Avoid `using namespace` inside header files
-    - Already talked about this on stream.
+- Avoid `using namespace` inside header files.
+    - I've already talked about this on stream.
     - Personally, I avoid `using namespace` inside headers.
     - Be considerate.
     - Keep namespace aliases inside your namespace.
         - `namespace fs = std::filesystem;` is fine in a header, but not in global scope.
 
-- Exceptions as error reporting for library functions
+- Use exceptions as error reporting for library functions.
     - A library function should never terminate the whole application.
     - Throw a custom error indicating failure, or resort to `std::runtime_error`.
 
-- Libraries should not directly use `stdin` / `stdout` / `stderr`
+- Libraries should not directly use `stdin` / `stdout` / `stderr`.
     - Input / output should always be done via function arguments / return value.
     - Use some configurable logging mechanism.
 
-- Use `enum class` over `enum`, over preprocessor define
+- Use `enum class` over `enum`, over preprocessor define.
     - `enum class` gets type-checked and is therefore preferred.
     - `enum` is still valid as it allows you to combine multiple members out-of-the-box (flag enum).
     - Do not use preprocessor defines as alternatives to enums.
         - Modern compilers emit debug symbols and warnings for enums, but not for preprocessor defines.
 
-- Avoid `std::endl`
+- Avoid `std::endl`.
     - Just prefer `\n`.
     - `std::endl` also flushes the stream which can cause performance issues.
 
-- Avoid low-level functions like `strcmp`
+- Avoid low-level functions like `strcmp`.
     - Usually it's better to convert your data to *better typed* C++ objects (e.g. `std::string`)
         - With `std::string` you can just write `myString == "foo"`.
     - Only use low-level functions directly when encountering performance issues.
 
-- Consider `std::string_view`
-    - This can prevent unnecessary conversion to `std::string` from C strings.
+- Consider `std::string_view`.
+    - This can prevent unnecessary conversions to `std::string` from C strings.
     - Take `std::string_view` by value.
     - Only use `std::string_view` as function argument.
     - String may *not* be null-terminated!
@@ -133,9 +133,9 @@
         - These may differ between compiler and versions; therefore, do not use them.
     - Symbols with a single underscore as prefix are to be viewed as *private* or *internal*.
         - Do not use this pattern yourself, it's often unnecessary.
-        - Putting stuff into a `detail` or `anonymous` namespace is the way to go.
+        - Putting stuff into a `detail` or anonymous namespace is the way to go.
 
-- Use Out-of-source builds
+- Use Out-of-source builds!
     - Do not pollute your source files with build artifacts.
     - Out-of-source builds allow you to have different build configurations side-by-side.
     - Build folders should not be tracked by your version control system (use `.gitignore`).
