@@ -103,6 +103,10 @@
     - A library function should never terminate the whole application.
     - Throw a custom error indicating failure, or resort to `std::runtime_error`.
 
+- Libraries should not directly use `stdin` / `stdout` / `stderr`
+    - Input / output should always be done via function arguments / return value.
+    - Use some configurable logging mechanism.
+
 - Use `enum class` over `enum`, over preprocessor define
     - `enum class` gets type-checked and is therefore preferred.
     - `enum` is still valid as it allows you to combine multiple members out-of-the-box (flag enum).
@@ -130,6 +134,11 @@
     - Symbols with a single underscore as prefix are to be viewed as *private* or *internal*.
         - Do not use this pattern yourself, it's often unnecessary.
         - Putting stuff into a `detail` or `anonymous` namespace is the way to go.
+
+- Use Out-of-source builds
+    - Do not pollute your source files with build artifacts.
+    - Out-of-source builds allow you to have different build configurations side-by-side.
+    - Build folders should not be tracked by your version control system (use `.gitignore`).
 
 ## Project structure
 
