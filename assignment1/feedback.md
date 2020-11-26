@@ -211,10 +211,8 @@ Building the engine as a library is certainly a possibility, but I suggest keepi
 .
 ├── cmake/
 ├── docs/
-├── myapp1/                 # Always use dedicated folders here. With this approach applications get bigger quickly.
-│   └── myapp1.cpp
-├── myapp2/
-│   └── myapp2.cpp
+├── myapp/                 # Always use dedicated folders here. With this approach applications get bigger quickly.
+│   └── myapp.cpp
 ├── myframework/
 │   ├── bar.cpp
 │   ├── bar.hpp
@@ -232,5 +230,7 @@ For simplicity we can use the whole repository as include path, giving all trans
 This is a very open approach that may only fit some projects.
 
 You'd then use `#include "myframework/foo.hpp"` for instance.
+
+You may of course build more than just one app; yet, the focus lies on the combination of app and framework.
 
 Consider watching [John Romero's talk at 2016 GDC Europe](https://www.youtube.com/watch?v=E2MIpi8pIvY) regarding some paradigms to follow during development.
