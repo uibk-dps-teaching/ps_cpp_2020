@@ -20,7 +20,7 @@
     - You loose some benefits of shared libraries.
 
 - Avoid overusing libraries.
-    - By introducing *library boundaries* to your code, you create additional *interfaces* that may require additional effort to maintain. 
+    - By introducing *library boundaries* to your code, you create additional *interfaces* that may require additional effort to maintain.
       As always, ensure this is worth the tradeoff.
     - Look at typical open-source libraries to get a feeling for how big a typical library actually is.
     - For the size of Boost, this makes sense; for `lit` sub-commands, not so much.
@@ -130,3 +130,98 @@
     - Symbols with a single underscore as prefix are to be viewed as *private* or *internal*.
         - Do not use this pattern yourself, it's often unnecessary.
         - Putting stuff into a `detail` or `anonymous` namespace is the way to go.
+
+## Project structure
+
+### Single Library
+
+This structure is preferred for projects that focus around a single library.
+There can be multiple executables which use this library.
+
+```
+.
+├── apps/                   # All executables go here, usually one .cpp file per executable.
+│   ├── myapp1.cpp
+│   └── myapp2.cpp
+├── cmake/                  # Contains all the project specific CMake modules.
+├── docs/                   # Handwritten documentation goes here.
+├── include/                # This includes all public headers defining the interface of the library.
+│   └── mylib/              # If there is more than one header file, put them in a folder with the library's name.
+│       ├── bar.hpp
+│       └── foo.hpp
+├── src/                    # Contains all sources (and private headers) of the library.
+│   ├── bar.cpp
+│   ├── foo.cpp
+│   └── utils.hpp
+├── tests/                  # Commonly contains unit tests. Adjust structure as needed.
+│   ├── bar_test.cpp
+│   └── foo_test.cpp
+├── vendor/                 # All third party libraries that are maintained along with this project go here.
+└── CMakeLists.txt
+```
+
+Separating the public headers clarifies which elements are part of the library's interface and which are implementation details.
+Furthermore, upon installing the library, we can simply copy the contents of `include` to the corresponding installation target.
+
+## Multiple Libraries
+
+This is very similar to the single library case. Just replicate `include`, `src`, `tests` for each library.
+
+```
+.
+├── apps/
+│   ├── myapp1.cpp
+│   └── myapp2.cpp
+├── cmake/
+├── docs/
+├── mylib1/
+│   ├── include/
+│   │   └── mylib1/
+│   ├── src/
+│   └── tests/              # Contains only tests specific to mylib1.
+├── mylib2/
+│   ├── include/
+│   │   └── mylib2/
+│   ├── src/
+│   └── tests/
+├── tests/                  # Contains tests that utilize more than one library.
+├── vendor/
+└── CMakeLists.txt
+```
+
+## Framework
+
+Sometimes the library approach with its clear separation between public interface and implementation details does not fit the project.
+Yet you may still keep some form of separation between components.
+
+For creating a video game, a common approach is to divide code into *game specific* code and *engine* code.
+Engine code deals with low-level elements and provides (often generic) tools, while the game specific code typically covers one dedicated use-case.
+Building the engine as a library is certainly a possibility, but I suggest keeping the border fuzzy and allowing game code to handle implementation details.
+
+```
+.
+├── cmake/
+├── docs/
+├── myapp1/                 # Always use dedicated folders here. With this approach applications get bigger quickly.
+│   └── myapp1.cpp
+├── myapp2/
+│   └── myapp2.cpp
+├── myframework/
+│   ├── bar.cpp
+│   ├── bar.hpp
+│   ├── foo.cpp
+│   └── foo.hpp
+├── tests/
+│   ├── bar_test.cpp
+│   └── foo_test.cpp
+├── vendor/
+└── CMakeLists.txt
+```
+
+Essentially we ditch the `include` directory and just keep headers next to the source files.
+For simplicity we can use the whole repository as include path, giving all translation units access to everything.
+This is a very open approach that may only fit some projects.
+
+You'd then use `#include "myframework/foo.hpp"` for instance.
+
+Consider watching [John Romero's talk at 2016 GDC Europe](https://www.youtube.com/watch?v=E2MIpi8pIvY) regarding some paradigms to follow during development.
