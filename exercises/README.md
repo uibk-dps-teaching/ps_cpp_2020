@@ -251,3 +251,76 @@ It could look like this:
     Destruction of second plugin
 
 *Hint:* Have a look at the related man-pages *dlopen(3)* and *dlsym(3)*.
+
+## Task 17
+
+Take your vector from Task 14 and implement componentwise addition via `operator+` on your vector.
+Support implicit type conversions: `MyVector<int>{} + MyVector<double>{}` yields a `MyVector<double>`.
+
+*Hint:* Look into `decltype` and `std::declval`.
+
+## Task 18
+
+You are given the following code snippet of a mathematical vector.
+
+```cpp
+template <std::size_t N>
+class Vector {
+  public:
+    /* ... */
+
+  private:
+    std::array<double, N> data;
+};
+```
+
+Find an elegant way to provide the following interface:
+
+- On default construction (no arguments), all elements are initialized to zero.
+- Besides copy / move semantics, there is only one additional constructor which takes *exactly* `N` `double`s to initialize `data`.
+- Accessing elements via the subscript operator `operator[]`.
+- Members `.x`, `.y`, `.z` access `data[0]`, `data[1]`, `data[2]` respectively:
+    - With `N == 1` there should be only `.x` available.
+    - With `N == 2` there should be `.x` and `.y` available.
+    - With `N == 3` there should be `.x`, `.y`, and `.z` available.
+
+Add a few tests to ensure correct behavior using the following aliases:
+
+```cpp
+using Vec1 = Vector<1>;
+using Vec2 = Vector<2>;
+using Vec3 = Vector<3>;
+```
+
+*Note:* You are allowed to modify the given snippet as necessary.
+
+## Task 19
+
+Revisit the meta programming example from the lecture regarding `std::tuple`.
+
+Given the following class template:
+
+```cpp
+template <typename... Types>
+class type_set {};
+```
+
+`type_set` should behave like a set of types.
+The empty set would therefore be `type_set<>`, while the set containing the type `int` would be `type_set<int>`, so on and so forth.
+
+- Create a meta function `type_set_contains_v` which checks if a given `type_set` contains a given type.
+- Create a meta function `type_set_is_subset_v` which checks if a given `type_set` is a subset of another given `type_set`.
+- Create a meta function `type_set_is_same_v` which checks if a given `type_set` is equal to another given `type_set`.
+- Create a meta function `type_set_size_v` which tells the size of a given `type_set`.
+  For `type_set<int, int, float>` it should return 2.
+
+Try not to use any of the utilities provided by the standard library (like the example provided in the lecture).
+
+*Hint:* If you are struggling with this exercise you might want to have a look at how *fold* (i.e. *reduce*) is used in functional programming languages.
+
+## Task 20
+
+Revisit the *Advanced Template* slides.
+
+Go through the `has_print_to` example from the slides step by step.
+Explain all parts like it's done in the lecture.
