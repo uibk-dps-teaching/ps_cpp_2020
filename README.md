@@ -53,6 +53,8 @@ Preferably use the following link.
 - [CppCon 2015 — *Give me 15 minutes & I'll change your view of GDB*](https://www.youtube.com/watch?v=PorfLSr3DDI)
 - [CppCon 2018 — *OOP is dead, long live Data-oriented design*](https://www.youtube.com/watch?v=yy8jQgmhbAU)
 - [CppCon 2014 — *Back to the Basics! Essentials of Modern C++ Style*](https://www.youtube.com/watch?v=xnqTKD8uD64)
+- [CppCon 2014 — *Modern Template Metaprogramming: A Compendium* Part 1](https://www.youtube.com/watch?v=Am2is2QCvxY) / [Part 2](https://www.youtube.com/watch?v=a0FliKwcwXE)
+
 
 ## Useful References / Tools
 
