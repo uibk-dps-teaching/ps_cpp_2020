@@ -28,7 +28,7 @@ You are allowed to use:
 - [Assimp](https://www.assimp.org/)
 - [stb-image](https://github.com/nothings/stb/blob/master/stb_image.h)
 - [Ogg](https://xiph.org/ogg/) / [Vorbis](https://xiph.org/vorbis/) / [Opus](https://opus-codec.org/)
-- [Tiled](https://www.mapeditor.org/)
+- [Tiled](https://www.mapeditor.org/) / [tileson](https://github.com/SSBMTonberry/tileson)
 - [OpenSSL](https://www.openssl.org/)
 - [SQLite](https://www.sqlite.org/)
 - [Catch2](https://github.com/DigitalInBlue/Celero)
