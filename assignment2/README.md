@@ -19,6 +19,7 @@ You are allowed to use:
 - [SDL](https://www.libsdl.org/)
 - [GLFW](https://www.glfw.org/)
 - [GLM](https://glm.g-truc.net/)
+- [SFML](https://www.sfml-dev.org/)
 - [Vulkan](https://www.khronos.org/vulkan/) / [Vulkan-Hpp](https://github.com/KhronosGroup/Vulkan-Hpp)
 - [Qt](https://www.qt.io/)
 - [ImGui](https://github.com/ocornut/imgui)
