@@ -126,7 +126,7 @@ Next, create 5 different instances and put all of them
 
 Use algorithms from the standard library, like `std::find` and `std::partition` on these containers and examine which operators are used.
 
-*Hint:* You may want to have a look at `std::tie`.
+**Hint:** You may want to have a look at `std::tie`.
 
 ## Task 09
 
@@ -250,14 +250,14 @@ It could look like this:
     Running the second plugin
     Destruction of second plugin
 
-*Hint:* Have a look at the related man-pages *dlopen(3)* and *dlsym(3)*.
+**Hint:** Have a look at the related man-pages *dlopen(3)* and *dlsym(3)*.
 
 ## Task 17
 
 Take your vector from Task 14 and implement componentwise addition via `operator+` on your vector.
 Support implicit type conversions: `MyVector<int>{} + MyVector<double>{}` yields a `MyVector<double>`.
 
-*Hint:* Look into `decltype` and `std::declval`.
+**Hint:** Look into `decltype` and `std::declval`.
 
 ## Task 18
 
@@ -292,7 +292,7 @@ using Vec2 = Vector<2>;
 using Vec3 = Vector<3>;
 ```
 
-*Note:* You are allowed to modify the given snippet as necessary.
+***Note:** You are allowed to modify the given snippet as necessary.
 
 ## Task 19
 
@@ -316,7 +316,7 @@ The empty set would therefore be `type_set<>`, while the set containing the type
 
 Try not to use any of the utilities provided by the standard library (like the example provided in the lecture).
 
-*Hint:* If you are struggling with this exercise you might want to have a look at how *fold* (i.e. *reduce*) is used in functional programming languages.
+***Hint:** If you are struggling with this exercise you might want to have a look at how *fold* (i.e. *reduce*) is used in functional programming languages.
 
 ## Task 20
 
