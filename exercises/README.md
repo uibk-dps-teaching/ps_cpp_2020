@@ -324,3 +324,8 @@ Revisit the *Advanced Template* slides.
 
 Go through the `has_print_to` example from the slides step by step.
 Explain all parts like it's done in the lecture.
+
+## Task 21
+
+Take a look at [Boost Operators](https://www.boost.org/doc/libs/1_74_0/libs/utility/operators.htm).
+Try to understand *why* the *curiously recurring template pattern (CRTP)* is used.
