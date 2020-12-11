@@ -254,7 +254,7 @@ It could look like this:
 
 ## Task 17
 
-Take your vector from Task 14 and implement componentwise addition via `operator+` on your vector.
+Take your vector from Task 14 and implement component-wise addition via `operator+` on your vector.
 Support implicit type conversions: `MyVector<int>{} + MyVector<double>{}` yields a `MyVector<double>`.
 
 **Hint:** Look into `decltype` and `std::declval`.
