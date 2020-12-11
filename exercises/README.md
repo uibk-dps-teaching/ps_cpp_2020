@@ -292,7 +292,7 @@ using Vec2 = Vector<2>;
 using Vec3 = Vector<3>;
 ```
 
-***Note:** You are allowed to modify the given snippet as necessary.
+**Note:** You are allowed to modify the given snippet as necessary.
 
 ## Task 19
 
