@@ -316,7 +316,7 @@ The empty set would therefore be `type_set<>`, while the set containing the type
 
 Try not to use any of the utilities provided by the standard library (like the example provided in the lecture).
 
-***Hint:** If you are struggling with this exercise you might want to have a look at how *fold* (i.e. *reduce*) is used in functional programming languages.
+**Hint:** If you are struggling with this exercise you might want to have a look at how *fold* (i.e. *reduce*) is used in functional programming languages.
 
 ## Task 20
 
