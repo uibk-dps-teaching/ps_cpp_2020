@@ -26,7 +26,7 @@ You are allowed to use:
 - [ncurses](https://invisible-island.net/ncurses/)
 - [OpenAL](https://openal.org/)
 - [nlohmann/json](https://github.com/nlohmann/json) / [RapidJSON](https://rapidjson.org/)
-- [yaml-cpp](https://github.com/jbeder/yaml-cpp)
+- [RapidYAML](https://github.com/biojppm/rapidyaml)
 - [Assimp](https://www.assimp.org/)
 - [stb-image](https://github.com/nothings/stb/blob/master/stb_image.h)
 - [Ogg](https://xiph.org/ogg/) / [Vorbis](https://xiph.org/vorbis/) / [Opus](https://opus-codec.org/)
