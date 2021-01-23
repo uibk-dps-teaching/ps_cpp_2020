@@ -32,14 +32,14 @@ int main()
 	Rect *r1_ptr = &r1;
 	assert(r1_ptr->area() == 9.0f);
 
-	// member variable pointer
+	// pointer to member variable
 	auto tl_mem_ptr = &Rect::tl; // Point Rect::*tl_mem_ptr
 
 	assert((r1.*tl_mem_ptr).x == 1.0f);
 
 	assert((r1_ptr->*tl_mem_ptr).x == 1.0f);
 
-	// member function pointer
+	// pointer to member function
 	auto area_memfn_ptr = &Rect::area; // float (Rect::*area_memfn_ptr)() const
 
 	assert((r1.*area_memfn_ptr)() == 9.0f);
