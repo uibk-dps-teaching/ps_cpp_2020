@@ -86,4 +86,6 @@ Use the following link, again replacing `XX` with your team number.
 Verify that the packaged version is working.
 Use the following link, again replacing `XX` with your team number.
 
+Include your specification in the package, even if it was initially provided with the course material.
+
 📧 [send email](mailto:alexander.hirsch@uibk.ac.at?subject=703807%20-%20Team%20XX%20Assignment%202%20Final)
